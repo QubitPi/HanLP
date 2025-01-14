@@ -40,11 +40,12 @@ jobs:
           python -m pip install setuptools wheel twine
       - name: Build docs
         run: make html
+        working-directory: docs
       - name: Deploy docs to GitHub Pages
         if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: doc/_build/html/stable
+          publish_dir: docs/build/html
           user_name: QubitPi
           user_email: jack20220723@gmail.com
