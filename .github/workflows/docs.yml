@@ -36,8 +36,9 @@ jobs:
           python -m pip install -e plugins/hanlp_common
           python -m pip install -e .
           python -m pip install pytest
-          python -m pip install setuptools wheel twine phrasetree
+          python -m pip install setuptools wheel twine
           sudo apt-get install python3-sphinx
+          pip install phrasetree
       - name: Build docs
         run: make html
         working-directory: docs
