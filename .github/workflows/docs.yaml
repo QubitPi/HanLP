@@ -39,7 +39,7 @@ jobs:
           python -m pip install pytest
           python -m pip install setuptools wheel twine
       - name: Build docs
-        run: make doc
+        run: make html
       - name: Deploy docs to GitHub Pages
         if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
