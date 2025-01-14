@@ -37,6 +37,7 @@ jobs:
           python -m pip install -e .
           python -m pip install pytest
           python -m pip install setuptools wheel twine
+          sudo apt-get install python3-sphinx
       - name: Build docs
         run: make html
         working-directory: docs
